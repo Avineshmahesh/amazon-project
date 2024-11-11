@@ -65,3 +65,16 @@ export function totalQuantity(){
 document.querySelector('.js-return-to-home')
  .innerHTML = `${cartQuantity} Items`;
 }
+
+export function updateDeliveryOption(productId, deliveryDetailsId)
+{
+  let matchingItem;
+    cart.forEach((item) => {
+      if (productId === item.productId) {
+        matchingItem = item;
+      }
+    });
+
+    matchingItem.deliveryDetailsId = deliveryDetailsId;
+    saveToStorage();
+};

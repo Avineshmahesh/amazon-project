@@ -1,3 +1,3 @@
 export function centsChangeMoney(cartCents){
-    return (cartCents/100).toFixed(2);
+    return (Math.round(cartCents)/100).toFixed(2);
 }
